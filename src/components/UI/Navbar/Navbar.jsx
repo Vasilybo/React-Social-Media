@@ -4,7 +4,7 @@ import MyButton from "../button/MyButton";
 import {AuthContext} from "../../../context";
 
 const Navbar = () => {
-    const {isAuth, setIsAuth} = useContext(AuthContext)
+    const {setIsAuth} = useContext(AuthContext)
 
     const logOut = () => {
         setIsAuth(false)

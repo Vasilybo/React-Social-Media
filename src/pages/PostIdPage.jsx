@@ -8,12 +8,12 @@ const PostIdPage = () => {
     const params = useParams();
     const [post, setPost] = useState({});
     const [comments, setComments] = useState([]);
-    const [fetchPostById, isLoading, error] = useFetching(async () => {
+    const [fetchPostById, isLoading] = useFetching(async () => {
         const response = await PostService.getById(params.id);
         setPost(response.data);
     })
 
-    const [fetchComments, isComLoading, comError] = useFetching(async () => {
+    const [fetchComments, isComLoading] = useFetching(async () => {
         const response = await PostService.getCommentsPostId(params.id);
         setComments(response.data);
     })

@@ -9,7 +9,7 @@ import {AuthContext} from "../context";
 import Loader from "./UI/Loader/Loader";
 
 const AppRouter = () => {
-    const {isAuth, setIsAuth, isLoading} = useContext(AuthContext)
+    const {isAuth, isLoading} = useContext(AuthContext)
 
     if(isLoading) {
         return <Loader/>
